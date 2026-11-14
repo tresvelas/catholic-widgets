@@ -1,12 +1,25 @@
-:root { color-scheme: light dark; }
+/* Support and privacy pages. Colours follow the landing page (landing.css). */
+:root {
+  color-scheme: light dark;
+  --parchment: #f4ecdd;
+  --ink: #291c14;
+  --ink-soft: #665445;
+  --rubric: #9e1a1c;
+  --rule: #d9c9a3;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --parchment: #110e11; --ink: #ede3cc; --ink-soft: #b3a68f; --rubric: #e0665c; --rule: #4a3f2c; }
+}
 body {
-  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  max-width: 40rem;
+  font: 18px/1.65 ui-serif, "New York", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  max-width: 42rem;
   margin: 0 auto;
   padding: 2rem 1.25rem 4rem;
+  background: var(--parchment);
+  color: var(--ink);
+  border-top: 4px solid #6e121c;
 }
-h1 { font-size: 1.7rem; line-height: 1.2; }
-h2 { font-size: 1.15rem; margin-top: 2rem; }
-.meta, .lang { color: gray; font-size: 0.9rem; }
-a { color: #8a5a00; }
-@media (prefers-color-scheme: dark) { a { color: #e6b455; } }
+h1 { font-size: 2.2rem; line-height: 1.15; letter-spacing: -0.01em; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+h2 { font-size: 1.2rem; margin-top: 2.2rem; }
+.meta, .lang { color: var(--ink-soft); font-size: 0.9rem; }
+a { color: var(--rubric); }
